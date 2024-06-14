@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('auth/login', [\App\Http\Controllers\AuthController::class, 'index'])->name('auth.login');
+
+Route::group(['middleware' => 'auth:web', 'prefix' => 'dashboard'], function () {
+    Route::get('index', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
+});

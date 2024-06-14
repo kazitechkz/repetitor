@@ -1,5 +1,5 @@
 <div>
-    <form class="space-y-6" action="#" method="POST">
+    <div class="space-y-6">
         @if(!$isSend)
             <div>
                 <label for="number" class="block text-sm font-medium leading-6 text-gray-900">Номер телефона</label>
@@ -15,6 +15,11 @@
                 <label for="code" class="block text-sm font-medium leading-6 text-gray-900">Введите код</label>
                 <input wire:model.defer="codeForm.number" id="code" placeholder="__-__" type="text" required class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                 <div class="text-red-500">@error('codeForm.number') {{ $message }} @enderror</div>
+                @if ($errorCode)
+                    <div class="text-red-600">
+                        Не правильный код
+                    </div>
+                @endif
             </div>
             <div class="mt-2 flex justify-between">
                 <p class="text-center text-sm text-gray-500">
@@ -40,7 +45,7 @@
                 </button>
             @endif
         </div>
-    </form>
+    </div>
 </div>
 
 <script>

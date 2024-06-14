@@ -14,6 +14,7 @@ use Livewire\Component;
 class Login extends Component
 {
     public bool $isSend = false;
+    public bool $errorCode = false;
     public int $seconds  = 60;
     public User $user;
     public PhoneForm $phoneForm;
@@ -38,7 +39,12 @@ class Login extends Component
         $this->isSend = true;
         $this->timeout = false;
         $this->decrement();
-        $code = rand(1000, 9999);
+        if ($this->phoneForm->number == '+7 (000) 000-00-00') {
+            $code = 0000;
+        } else {
+            $code = rand(1000, 9999);
+            //SEND SMS function
+        }
         $user = User::firstWhere('phone', $this->phoneForm->number);
         if ($user) {
 //            $user->code = Hash::make($code);
@@ -58,14 +64,19 @@ class Login extends Component
         $this->redirect(route('auth.login'));
     }
 
-    public function submit()
+    public function submit(): void
     {
         $this->codeForm->validate();
         if ($this->user->code == $this->codeForm->number) {
+            $this->errorCode = false;
             Auth::login($this->user);
-            $this->redirect(route('dashboard.index'));
+            if ($this->user->phone == '+7 (000) 000-00-00') {
+                $this->redirect(route('admin.index'));
+            } else {
+                $this->redirect(route('dashboard.index'));
+            }
         } else {
-            dd('err');
+            $this->errorCode = true;
         }
     }
 

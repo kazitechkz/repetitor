@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\SMSC;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller

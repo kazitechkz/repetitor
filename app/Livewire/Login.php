@@ -1,14 +1,13 @@
 <?php
-
 namespace App\Livewire;
 
 use App\Livewire\Forms\CodeForm;
 use App\Livewire\Forms\PhoneForm;
 use App\Models\User;
+use App\Services\SmsService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Attributes\On;
-use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class Login extends Component
@@ -20,6 +19,7 @@ class Login extends Component
     public PhoneForm $phoneForm;
     public CodeForm $codeForm;
     public bool $timeout = false;
+
     #[On('timer')]
     public function decrement(): void
     {
@@ -31,9 +31,7 @@ class Login extends Component
         }
     }
 
-
-
-    public function sendSms(): void
+    public function sendSms(SmsService $smsService): void
     {
         $this->phoneForm->validate();
         $this->isSend = true;
@@ -43,18 +41,18 @@ class Login extends Component
             $code = 0000;
         } else {
             $code = rand(1000, 9999);
-            //SEND SMS function
+            //SEND SMS service
+            $smsService->sendSMS($this->phoneForm->number, $code);
         }
         $user = User::firstWhere('phone', $this->phoneForm->number);
         if ($user) {
-//            $user->code = Hash::make($code);
-            $user->code = $code;
+            $user->code = Hash::make($code);
             $user->save();
             $this->user = $user;
         } else {
             $this->user = User::create([
                 'phone' => $this->phoneForm->number,
-                'code' => $code
+                'code' => Hash::make($code)
             ]);
         }
     }
@@ -67,7 +65,7 @@ class Login extends Component
     public function submit(): void
     {
         $this->codeForm->validate();
-        if ($this->user->code == $this->codeForm->number) {
+        if (Hash::check($this->codeForm->number, $this->user->code)) {
             $this->errorCode = false;
             Auth::login($this->user);
             if ($this->user->phone == '+7 (000) 000-00-00') {

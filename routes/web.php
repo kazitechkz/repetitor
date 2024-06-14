@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('auth/login', [\App\Http\Controllers\AuthController::class, 'index'])->name('auth.login');
 
-Route::group(['middleware' => 'auth:web', 'prefix' => 'dashboard'], function () {
+Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
     Route::get('index', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
 });
 
@@ -29,5 +29,5 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function () {
 
 Route::get('auth/logout', function () {
     Auth::logout();
-    return redirect(\route('auth.login'));
+    return redirect(route('welcome'));
 })->name('auth.logout');

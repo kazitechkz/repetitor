@@ -14,7 +14,7 @@ class Login extends Component
 {
     public bool $isSend = false;
     public bool $errorCode = false;
-    public int $seconds  = 60;
+    public int $seconds  = 90;
     public User $user;
     public PhoneForm $phoneForm;
     public CodeForm $codeForm;
@@ -26,7 +26,7 @@ class Login extends Component
         if ($this->seconds > 0 && !$this->timeout) {
             $this->seconds--;
         } else {
-            $this->seconds = 60;
+            $this->seconds = 90;
             $this->timeout = true;
         }
     }

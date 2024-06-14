@@ -11,6 +11,10 @@
         @endif
 
         @if($isSend)
+                <label for="number2" class="block text-sm font-medium leading-6 text-gray-900">Номер телефона</label>
+                <div class="!mt-0">
+                    <input wire:model="phoneForm.number" id="number2" type="text" autocomplete="phone" disabled required class="bg-gray-300 block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                </div>
             <div class="mt-2">
                 <label for="code" class="block text-sm font-medium leading-6 text-gray-900">Введите код</label>
                 <input wire:model.defer="codeForm.number" id="code" placeholder="__-__" type="text" required class="block w-full rounded-md border-0 px-1.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
@@ -21,11 +25,14 @@
                     </div>
                 @endif
             </div>
+            <div class="mt-2">
+                <small class="text-gray-500">Обратите внимание: для абонентов операторов Теле2 и Алтел SMS может прийти с небольшой задержкой.</small>
+            </div>
             <div class="mt-2 flex justify-between">
                 <p class="text-center text-sm text-gray-500">
-                    <a wire:click="changePhone()" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500 cursor-pointer">Другой номер</a>
+                    <a wire:click="changePhone()" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500 cursor-pointer">Изменить номер</a>
                 </p>
-                @if ($seconds > 0 && $seconds != 60)
+                @if ($seconds > 0 && $seconds != 90)
                     <p class="text-center text-sm text-gray-500">{{ $seconds }} сек</p>
                 @else
                     <a wire:click="sendSms" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500 cursor-pointer">

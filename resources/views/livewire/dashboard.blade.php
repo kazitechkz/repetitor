@@ -33,7 +33,8 @@
                         <div class="rounded-xl w-20 h-20 my-auto" style="background-image: url('{{asset('images/book.svg')}}'); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
                     </div>
                     <div class="p-4">
-                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Репетитор по истории</div>
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Нужна подготовка к ЕНТ. Перехожу в 11 класс</div>
+                        <p class="mt-1 text-gray-500">Профильные предметы: Химия, Биология. Только оффлайн уроки.</p>
                         <p class="mt-2 text-gray-500">Можно выполнить удаленно</p>
                         <p class="mt-1 text-gray-500">Регулярные занятия</p>
                         <div class="mt-2 flex items-center">
@@ -63,9 +64,8 @@
                         <div class="rounded-xl w-20 h-20 my-auto" style="background-image: url('{{asset('images/book.svg')}}'); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
                     </div>
                     <div class="p-4">
-                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Информатика практическое задание</div>
-                        <p class="mt-2 text-gray-500">Можно выполнить удаленно</p>
-                        <p class="mt-1 text-gray-500">29 мая, 23:41 — 14 июня, 23:59</p>
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">ҰБТ-ға дайындық керек. 11 сынып</div>
+                        <p class="mt-1 text-gray-500">Профиль пәндер ФИЗ, МАТ. Тек онлайн</p>
                         <div class="mt-2 flex items-center">
                             <div class="w-10 h-10 bg-no-repeat bg-center bg-contain rounded-xl" style="background-image: url('{{asset('images/credit.png')}}')"></div>
                             <span class="ml-2 text-sm text-gray-500">Сделка без риска</span>
@@ -73,9 +73,69 @@
                     </div>
                 </div>
                 <div class="p-4 text-right">
-                    <div class="text-lg font-semibold text-gray-900">до 1500 тг/час</div>
+                    <div class="text-lg font-semibold text-gray-900">до 2000 тг/час</div>
                     <div class="mt-2">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Нота Д</a>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Аружан</a>
+                    </div>
+                    <div class="mt-1 text-gray-500">Нет отзывов</div>
+                    <button type="button" wire:click="respond()" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        Откликнуться
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-3 mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
+        <div class="w-full mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="md:flex justify-between">
+                <div class="md:flex">
+                    <div class="md:flex-shrink-0 p-4">
+                        <div class="rounded-xl w-20 h-20 my-auto" style="background-image: url('{{asset('images/book.svg')}}'); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
+                    </div>
+                    <div class="p-4">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Ищу репетитора по турецкому языку для изучения уровня B1 и выше</div>
+                        <p class="mt-2 text-gray-500">Можно выполнить удаленно</p>
+                        <p class="mt-1 text-gray-500">Рассматриваю преподавателя только женщину в возрасте 30+,действительно знающая все нюансы турецкого языка.</p>
+                        <div class="mt-2 flex items-center">
+                            <div class="w-10 h-10 bg-no-repeat bg-center bg-contain rounded-xl" style="background-image: url('{{asset('images/credit.png')}}')"></div>
+                            <span class="ml-2 text-sm text-gray-500">Сделка без риска</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 text-right">
+                    <div class="text-lg font-semibold text-gray-900">до 2500 тг/час</div>
+                    <div class="mt-2">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Айгерим</a>
+                    </div>
+                    <div class="mt-1 text-gray-500">Нет отзывов</div>
+                    <button type="button" wire:click="respond()" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        Откликнуться
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-3 mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
+        <div class="w-full mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="md:flex justify-between">
+                <div class="md:flex">
+                    <div class="md:flex-shrink-0 p-4">
+                        <div class="rounded-xl w-20 h-20 my-auto" style="background-image: url('{{asset('images/autocad.svg')}}'); background-position: center; background-size: contain; background-repeat: no-repeat;"></div>
+                    </div>
+                    <div class="p-4">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Хотим подготовить ребенка к поступлению в НИШ</div>
+                        <p class="mt-2 text-gray-500">Улица Каскабулак, 101/2</p>
+                        <p class="mt-1 text-gray-500">Регулярные занятия</p>
+                        <div class="mt-2 flex items-center">
+                            <div class="w-10 h-10 bg-no-repeat bg-center bg-contain rounded-xl" style="background-image: url('{{asset('images/credit.png')}}')"></div>
+                            <span class="ml-2 text-sm text-gray-500">Сделка без риска</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 text-right">
+                    <div class="text-lg font-semibold text-gray-900">до 5000 тг/час</div>
+                    <div class="mt-2">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Жандос</a>
                     </div>
                     <div class="mt-1 text-gray-500">Нет отзывов</div>
                     <button type="button" wire:click="respond()" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
@@ -94,7 +154,7 @@
                     </div>
                     <div class="p-4">
                         <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Ищу учителя AutoCAD, solid works, Siemens</div>
-                        <p class="mt-2 text-gray-500">Улица Каскабулак, 101/2</p>
+                        <p class="mt-2 text-gray-500">Можно онлайн так и оффлайн</p>
                         <p class="mt-1 text-gray-500">Регулярные занятия</p>
                         <div class="mt-2 flex items-center">
                             <div class="w-10 h-10 bg-no-repeat bg-center bg-contain rounded-xl" style="background-image: url('{{asset('images/credit.png')}}')"></div>

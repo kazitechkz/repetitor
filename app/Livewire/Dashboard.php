@@ -68,6 +68,42 @@ class Dashboard extends Component
         $this->dispatch('triggerAlert', 'Your alert message');
     }
 
+    public function respond(): void
+    {
+        $utm = Utm::where('user_id', auth()->id())->first();
+        if ($utm) {
+            $utm->query++;
+            $utm->save();
+        } else {
+            Utm::create([
+                'query' => 1,
+                'user_id' => auth()->id()
+            ]);
+        }
+
+        $this->triggerTopUp();
+    }
+
+    #[On('topUp')]
+    public function triggerTopUp(): void
+    {
+        $this->dispatch('triggerTopUp', 'Your alert message');
+    }
+
+    #[On('balance')]
+    public function topUpBalance(): void
+    {
+        $utm = Utm::where('user_id', auth()->id())->first();
+        if ($utm) {
+            $utm->top_up++;
+            $utm->save();
+        } else {
+            Utm::create([
+                'top_up' => 1,
+                'user_id' => auth()->id()
+            ]);
+        }
+    }
     public function render(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('livewire.dashboard');

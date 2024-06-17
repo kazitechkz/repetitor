@@ -11,6 +11,7 @@ class Utm extends Model
     protected $table = 'utms';
     protected $fillable = [
         'balance',
+        'top_up',
         'rating',
         'account',
         'query',

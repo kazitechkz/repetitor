@@ -14,7 +14,7 @@ class Login extends Component
 {
     public bool $isSend = false;
     public bool $errorCode = false;
-    public int $seconds  = 90;
+    public int $seconds  = 99;
     public User $user;
     public PhoneForm $phoneForm;
     public CodeForm $codeForm;
@@ -26,7 +26,7 @@ class Login extends Component
         if ($this->seconds > 0 && !$this->timeout) {
             $this->seconds--;
         } else {
-            $this->seconds = 90;
+            $this->seconds = 99;
             $this->timeout = true;
         }
     }
@@ -40,9 +40,10 @@ class Login extends Component
         if ($this->phoneForm->number == '+7 (000) 000-00-00') {
             $code = 0000;
         } else {
-            $code = rand(1000, 9999);
+//            $code = rand(1000, 9999);
+            $code = 0000;
             //SEND SMS service
-            $smsService->sendSMS($this->phoneForm->number, $code);
+//            $smsService->sendSMS($this->phoneForm->number, $code);
         }
         $user = User::firstWhere('phone', $this->phoneForm->number);
         if ($user) {

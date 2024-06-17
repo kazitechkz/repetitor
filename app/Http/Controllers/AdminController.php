@@ -14,6 +14,7 @@ class AdminController extends Controller
         $totalRating = Utm::sum('rating');
         $totalAccount = Utm::sum('account');
         $totalQuery = Utm::sum('query');
-        return view('admin', compact('stats', 'totalBalance', 'totalRating', 'totalAccount', 'totalQuery'));
+        $totalTopUp = Utm::sum('top_up');
+        return view('admin', compact('stats', 'totalBalance', 'totalRating', 'totalAccount', 'totalQuery', 'totalTopUp'));
     }
 }

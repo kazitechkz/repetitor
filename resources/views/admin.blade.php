@@ -27,6 +27,7 @@
                                 <th scope="col" class="px-6 py-4">#</th>
                                 <th scope="col" class="px-6 py-4">Номер телефона</th>
                                 <th scope="col" class="px-6 py-4">Отклики</th>
+                                <th scope="col" class="px-6 py-4">Пополнить</th>
                                 <th scope="col" class="px-6 py-4">Баланс</th>
                                 <th scope="col" class="px-6 py-4">Рейтинг</th>
                                 <th scope="col" class="px-6 py-4">Аккаунт</th>
@@ -38,6 +39,7 @@
                                         <td class="whitespace-nowrap px-6 py-4 font-medium">{{$loop->iteration}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$stat->user->phone}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$stat->query}}</td>
+                                        <td class="whitespace-nowrap px-6 py-4">{{$stat->top_up}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$stat->balance}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$stat->rating}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$stat->account}}</td>

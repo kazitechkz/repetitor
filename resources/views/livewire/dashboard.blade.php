@@ -1,6 +1,6 @@
 <div>
     <nav class="bg-white shadow p-4 flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-4">
-        <button wire:click="utm('query')" class="border-indigo-400 border text-black px-4 py-2 rounded flex items-center space-x-2 w-full md:w-auto justify-center">
+        <button type="button" class="border-indigo-400 border text-black px-4 py-2 rounded flex items-center space-x-2 w-full md:w-auto justify-center">
             <svg class="h-5 w-28 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0H5m3 0l1 9m-1-9H7m2 0V9m1 3V9m0 0l2-6m2 6h1m0 0l-1 9m1-9h2.3M5 12h2.3M5 12l1-6m2 6v3.3m0-3.3v2.3m2-2.3v2.3m0-2.3v3.3M9 12h6m3 0h2.3M8 12h6m-6 0v3.3m0-3.3V9m-2 3v2.3m0-2.3v3.3m3-3v3.3m-3-3V9m0 0l-2 6m2-6h4m2 0h4"></path>
             </svg>
@@ -48,7 +48,7 @@
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Алина</a>
                     </div>
                     <div class="mt-1 text-gray-500">Нет отзывов</div>
-                    <button type="button" wire:click="utm('query')" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <button type="button" wire:click="respond()" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                         Откликнуться
                     </button>
                 </div>
@@ -78,7 +78,7 @@
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Нота Д</a>
                     </div>
                     <div class="mt-1 text-gray-500">Нет отзывов</div>
-                    <button type="button" wire:click="utm('query')" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <button type="button" wire:click="respond()" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                         Откликнуться
                     </button>
                 </div>
@@ -108,7 +108,7 @@
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Максим Т</a>
                     </div>
                     <div class="mt-1 text-gray-500">Нет отзывов</div>
-                    <button type="button" wire:click="utm('query')" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <button type="button" wire:click="respond()" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                         Откликнуться
                     </button>
                 </div>
@@ -138,7 +138,7 @@
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Асет К</a>
                     </div>
                     <div class="mt-1 text-gray-500">Нет отзывов</div>
-                    <button type="button" wire:click="utm('query')" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <button type="button" wire:click="respond()" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                         Откликнуться
                     </button>
                 </div>
@@ -168,7 +168,7 @@
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Кристина А</a>
                     </div>
                     <div class="mt-1 text-gray-500">Нет отзывов</div>
-                    <button type="button" wire:click="utm('query')" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                    <button type="button" wire:click="respond()" class=" my-3 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                         Откликнуться
                     </button>
                 </div>
@@ -184,6 +184,23 @@
                 title: "Данный раздел находится в разработке!",
                 text: " Мы прилагаем все усилия, чтобы предложить вам что-то удивительное. Следите за обновлениями! ",
                 icon: "info"
+            });
+        });
+        Livewire.on('triggerTopUp', message => {
+            Swal.fire({
+                title: "Чтобы просмотреть карточку ученика, нужно пополнить счет на мин 1000 тг!",
+                text: "Сумма комиссии составляет 10%",
+                icon: "info",
+                confirmButtonText: "Пополнить баланс"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.dispatch('balance')
+                    Swal.fire({
+                        title: "Данный раздел находится в разработке!",
+                        text: " Мы прилагаем все усилия, чтобы предложить вам что-то удивительное. Следите за обновлениями! ",
+                        icon: "info"
+                    });
+                }
             });
         });
     });

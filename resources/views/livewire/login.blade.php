@@ -32,7 +32,7 @@
                 <p class="text-center text-sm text-gray-500">
                     <a wire:click="changePhone()" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500 cursor-pointer">Изменить номер</a>
                 </p>
-                @if ($seconds > 0 && $seconds != 90)
+                @if ($seconds > 0 && $seconds != 99)
                     <p class="text-center text-sm text-gray-500">{{ $seconds }} сек</p>
                 @else
                     <a wire:click="sendSms" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500 cursor-pointer">

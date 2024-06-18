@@ -36,7 +36,7 @@
 
     <div class="my-10">
         <div class="p-10 rounded-lg text-center">
-            <h1 class="text-5xl font-bold">Зарабатывайте с нами — в среднем 3000 тг/час за занятие</h1>
+            <h1 class="text-5xl font-bold">Зарабатывайте с нами — в среднем 5000 тг/час за занятие</h1>
             <div class="grid grid-cols-1 md:grid-cols-5 gap-5 mt-10">
                 <div class="w-full bg-center bg-no-repeat bg-cover rounded-xl" style="background-image: url('https://repetitor.ru/v2023/img/slide-1.jpg'); height: 300px"></div>
                 <div class="w-full p-5 bg-white bg-center bg-no-repeat bg-contain flex items-center rounded-xl" style="height: 300px">

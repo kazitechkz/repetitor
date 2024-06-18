@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="p-4 text-right">
-                    <div class="text-lg font-semibold text-gray-900">до 2000 тг/час</div>
+                    <div class="text-lg font-semibold text-gray-900">до 5000 тг/час</div>
                     <div class="mt-2">
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Алина</a>
                     </div>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="p-4 text-right">
-                    <div class="text-lg font-semibold text-gray-900">до 2000 тг/час</div>
+                    <div class="text-lg font-semibold text-gray-900">до 5000 тг/час</div>
                     <div class="mt-2">
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Аружан</a>
                     </div>

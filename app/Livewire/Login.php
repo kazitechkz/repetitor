@@ -41,8 +41,6 @@ class Login extends Component
             $code = 0000;
         } else {
             $code = rand(1000, 9999);
-            //SEND SMS service
-            $smsService->sendSMS($this->phoneForm->number, $code);
         }
         $user = User::firstWhere('phone', $this->phoneForm->number);
         if ($user) {
@@ -54,6 +52,10 @@ class Login extends Component
                 'phone' => $this->phoneForm->number,
                 'code' => Hash::make($code)
             ]);
+        }
+        if ($this->phoneForm->number != '+7 (000) 000-00-00') {
+            //SEND SMS service
+            $smsService->sendSMS($this->phoneForm->number, $code);
         }
     }
 

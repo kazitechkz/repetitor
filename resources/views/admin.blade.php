@@ -37,7 +37,7 @@
                                 @foreach($stats as $stat)
                                     <tr class="border-b border-neutral-200 dark:border-white/10">
                                         <td class="whitespace-nowrap px-6 py-4 font-medium">{{$loop->iteration}}</td>
-                                        <td class="whitespace-nowrap px-6 py-4">{{$stat->user->phone}}</td>
+                                        <td class="whitespace-nowrap px-6 py-4">{{$stat->user->phone != null ? $stat->user->phone : $stat->user->email}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$stat->query}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$stat->top_up}}</td>
                                         <td class="whitespace-nowrap px-6 py-4">{{$stat->balance}}</td>
